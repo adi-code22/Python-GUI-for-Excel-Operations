@@ -1,0 +1,14 @@
+Build a GUI - (can be done using any GUI library)- tkinter, pysimplegui.)
+1. Button 1- Input File- This button will allow the user to open a browse window and upload only excel or csv files.
+2. Button 2- Process Data-This will be the main button on click of which the logic will run.
+3. Button 3- Launch Output - This will launch the output that has been generated.
+4. Scrollbar-Vertical
+5. Scale Bar- Threshold - This will have the values from 0$ to 10$.
+6. Input Field - Date - Today's date.
+7. Radio Button -.xlsx,.csv
+
+
+* Input an excel or csv file which would have the two columns having amounts.
+* Set the threshold to particular dollar value.
+* Build a logic which on click of "process data" button would calculate difference between the two columns and put this difference under the column "Difference" and check the appropriateness according to the threshold value set by the user on the UI. If the difference is greater than the difference, then the row would be populated as inappropriate else appropriate. Populate the appropriateness of the difference in the "Assessment" column
+* On click of the  "Launch Output" button, the output file with two new columns would be launched on the desktop.

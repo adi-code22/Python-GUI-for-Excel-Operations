@@ -36,7 +36,7 @@ def process():
         temp = filename.get()
         temp2 = pd.read_excel(temp)
         df.set(temp2)
-        temp2['Difference'] = temp2['Amount1'] - temp2['Amount2']
+        temp2['Difference'] = temp2['Amount 1'] - temp2['Amount 2']
         temp2['Assessment'] = ""
         slider = v.get()
         for name, value in temp2.iteritems():

@@ -36,7 +36,7 @@ def process():
         temp = filename.get()
         temp2 = pd.read_excel(temp)
         df.set(temp2)
-        temp2['Difference'] = temp2['Column1'] - temp2['Column2']
+        temp2['Difference'] = temp2['Amount1'] - temp2['Amount2']
         temp2['Assessment'] = ""
         slider = v.get()
         for name, value in temp2.iteritems():
@@ -70,6 +70,7 @@ def launch():
     except Exception as e:
         print(e)
 
+
 start = Tk()
 start.title("Excel Operation with Python")
 start.geometry("500x400")
@@ -82,7 +83,7 @@ cs = BooleanVar()
 
 # Create Main Frame
 main_frame = Frame(start)
-main_frame.pack(fill=BOTH, expand=1 )
+main_frame.pack(fill=BOTH, expand=1)
 # Create Canvas
 my_canvas = Canvas(main_frame)
 my_canvas.pack(side=LEFT, fill=BOTH, expand=1)
@@ -94,15 +95,13 @@ my_scrollbar.pack(side=RIGHT, fill=Y)
 my_canvas.configure(yscrollcommand=my_scrollbar.set)
 my_canvas.bind('<Configure>', lambda e: my_canvas.configure(scrollregion=my_canvas.bbox("all")))
 # Create new frame inside Canvas
-window=Frame(my_canvas)
+window = Frame(my_canvas)
 # Add new frame to window
-my_canvas.create_window((0, 0), window = window, ancho='nw')
-
-
+my_canvas.create_window((0, 0), window=window, ancho='nw')
 
 # window.config(background="white")
 
-t = Text(window, height=1, width= 20)
+t = Text(window, height=1, width=20)
 
 
 def excelf():
@@ -153,35 +152,24 @@ button_process = Button(window,
                         text="Process Data",
                         command=process, width=25, height=2)
 
-
-
-
-
-
-
-
-
-label_file_explorer.pack(side= TOP,padx=(0, 0))
+label_file_explorer.pack(side=TOP, padx=(0, 0))
 
 t.pack(side=TOP)
 
 button_explore.pack(side=TOP, pady=(25, 25))
 
-fileselect.pack(side= TOP, padx=(0, 0))
+fileselect.pack(side=TOP, padx=(0, 0))
 
-scale.pack(side= TOP)
+scale.pack(side=TOP)
 
-button_process.pack(side= TOP, pady=(25, 25))
+button_process.pack(side=TOP, pady=(25, 25))
 
-processdata.pack(side= TOP, padx=(0, 0))
+processdata.pack(side=TOP, padx=(0, 0))
 
-excel.pack(side= TOP)
+excel.pack(side=TOP)
 csv.pack(side=TOP)
-button_launch.pack(side= TOP, pady=(25, 25))
+button_launch.pack(side=TOP, pady=(25, 25))
 
-launchl.pack(side= TOP, padx=(0, 0))
-
-
+launchl.pack(side=TOP, padx=(0, 0))
 
 window.mainloop()
-

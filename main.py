@@ -8,8 +8,7 @@ import os
 pd.options.mode.chained_assignment = None
 
 
-# Function for opening the
-# file explorer window
+
 
 
 def browsefiles():
